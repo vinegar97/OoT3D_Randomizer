@@ -26,10 +26,10 @@ IncomingGetItemID_patch:
 SaveFile_Init_patch:
     bl hook_SaveFile_Init
 
-.section .patch_OverrideOcarinaSongs
-.global OverrideOcarinaSongs_patch
-OverrideOcarinaSongs_patch:
-    bl Cutscene_OverrideOcarinaSongs
+# .section .patch_OverrideOcarinaSongs
+# .global OverrideOcarinaSongs_patch
+# OverrideOcarinaSongs_patch:
+    # bl Cutscene_OverrideOcarinaSongs
 
 .section .patch_OverrideTextID
 .global OverrideTextID_patch
@@ -358,45 +358,45 @@ LACSConditionTwo_patch:
     nop
     nop
 
-.section .patch_MinuetLocation
-.global MinuetLocation_patch
-MinuetLocation_patch:
-    bl Cutscene_OverrideMinuet
-    b 0x26C47C
+# .section .patch_MinuetLocation
+# .global MinuetLocation_patch
+# MinuetLocation_patch:
+    # bl Cutscene_OverrideMinuet
+    # b 0x26C47C
 
-.section .patch_BoleroLocation
-.global BoleroLocation_patch
-BoleroLocation_patch:
-    bl Cutscene_OverrideBolero
-    b 0x26C47C
+# .section .patch_BoleroLocation
+# .global BoleroLocation_patch
+# BoleroLocation_patch:
+    # bl Cutscene_OverrideBolero
+    # b 0x26C47C
 
-.section .patch_SerenadeCheckChestFlag
-.global SerenadeCheckChestFlag_patch
-SerenadeCheckChestFlag_patch:
-    bl hook_SerenadeCheckChestFlag
+# .section .patch_SerenadeCheckChestFlag
+# .global SerenadeCheckChestFlag_patch
+# SerenadeCheckChestFlag_patch:
+    # bl hook_SerenadeCheckChestFlag
 
-.section .patch_SerenadeLocation
-.global SerenadeLocation_patch
-SerenadeLocation_patch:
-    bl Cutscene_OverrideSerenade
-    b 0x2B25A8
+# .section .patch_SerenadeLocation
+# .global SerenadeLocation_patch
+# SerenadeLocation_patch:
+    # bl Cutscene_OverrideSerenade
+    # b 0x2B25A8
 
-.section .patch_RequiemLocation
-.global RequiemLocation_patch
-RequiemLocation_patch:
-    nop
-    nop
-    bl Cutscene_OverrideRequiem
+# .section .patch_RequiemLocation
+# .global RequiemLocation_patch
+# RequiemLocation_patch:
+    # nop
+    # nop
+    # bl Cutscene_OverrideRequiem
 
-.section .patch_NocturneLocation
-.global NocturneLocation_patch
-NocturneLocation_patch:
-    bl Cutscene_OverrideNocturne
-.if _EUR_==1
-    b 0x44F1A0
-.else
-    b 0x44F180
-.endif
+# .section .patch_NocturneLocation
+# .global NocturneLocation_patch
+# NocturneLocation_patch:
+    # bl Cutscene_OverrideNocturne
+# .if _EUR_==1
+    # b 0x44F1A0
+# .else
+    # b 0x44F180
+# .endif
 
 .section .patch_FreeScarecrow
 .global FreeScarecrow_patch
@@ -408,75 +408,75 @@ FreeScarecrow_patch:
 MasterSwordAlwaysDrop_patch:
     nop
 
-.section .patch_PreludeLocation
-.global PreludeLocation_patch
-PreludeLocation_patch:
-    bl Cutscene_OverridePrelude
-    cmp r0,#0x0
-    beq 0x18DAD0
-    b 0x18DA38
+# .section .patch_PreludeLocation
+# .global PreludeLocation_patch
+# PreludeLocation_patch:
+    # bl Cutscene_OverridePrelude
+    # cmp r0,#0x0
+    # beq 0x18DAD0
+    # b 0x18DA38
 
-.section .patch_LullabyLocation
-.global LullabyLocation_patch
-LullabyLocation_patch:
-    bl Cutscene_OverrideLullaby
-    b 0x3A0AC8
+# .section .patch_LullabyLocation
+# .global LullabyLocation_patch
+# LullabyLocation_patch:
+    # bl Cutscene_OverrideLullaby
+    # b 0x3A0AC8
 
-.section .patch_EponasSongCheckFlag
-.global EponasSongCheckFlag_patch
-EponasSongCheckFlag_patch:
-    bl hook_EponasSongCheckFlag
+# .section .patch_EponasSongCheckFlag
+# .global EponasSongCheckFlag_patch
+# EponasSongCheckFlag_patch:
+    # bl hook_EponasSongCheckFlag
 
-.section .patch_EponasSongCheckFlagTwo
-.global EponasSongCheckFlagTwo_patch
-EponasSongCheckFlagTwo_patch:
-    bl hook_EponasSongCheckFlag
+# .section .patch_EponasSongCheckFlagTwo
+# .global EponasSongCheckFlagTwo_patch
+# EponasSongCheckFlagTwo_patch:
+    # bl hook_EponasSongCheckFlag
 
-.section .patch_EponasSongLocation
-.global EponasSongLocation_patch
-EponasSongLocation_patch:
-    bl Cutscene_OverrideEponasSong
-    b 0x3C61CC
+# .section .patch_EponasSongLocation
+# .global EponasSongLocation_patch
+# EponasSongLocation_patch:
+    # bl Cutscene_OverrideEponasSong
+    # b 0x3C61CC
 
-.section .patch_MalonNextAction
-.global MalonNextAction_patch
-MalonNextAction_patch:
-    .word 0x3D2A14
+# .section .patch_MalonNextAction
+# .global MalonNextAction_patch
+# MalonNextAction_patch:
+    # .word 0x3D2A14
 
-.section .patch_SariasSongCheckFlag
-.global SariasSongCheckFlag_patch
-SariasSongCheckFlag_patch:
-    bl hook_SariasSongCheckFlag
+# .section .patch_SariasSongCheckFlag
+# .global SariasSongCheckFlag_patch
+# SariasSongCheckFlag_patch:
+    # bl hook_SariasSongCheckFlag
 
-.section .patch_SariasSongItemGive
-.global SariasSongItemGive_patch
-SariasSongItemGive_patch:
-    nop
+# .section .patch_SariasSongItemGive
+# .global SariasSongItemGive_patch
+# SariasSongItemGive_patch:
+    # nop
 
-.section .patch_SariasSongLocation
-.global SariasSongLocation_patch
-SariasSongLocation_patch:
-    bl Cutscene_OverrideSariasSong
-    b 0x12C92C
+# .section .patch_SariasSongLocation
+# .global SariasSongLocation_patch
+# SariasSongLocation_patch:
+    # bl Cutscene_OverrideSariasSong
+    # b 0x12C92C
 
-.section .patch_SunsSongLocation
-.global SunsSongLocation_patch
-SunsSongLocation_patch:
-    bl Cutscene_OverrideSunsSong
-    b 0x2888F0
+# .section .patch_SunsSongLocation
+# .global SunsSongLocation_patch
+# SunsSongLocation_patch:
+    # bl Cutscene_OverrideSunsSong
+    # b 0x2888F0
 
-.section .patch_SongOfTimeLocation
-.global SongOfTimeLocation_patch
-SongOfTimeLocation_patch:
-    cpy r0,r5
-    bl Cutscene_OverrideSongOfTime
-    b 0x3C3780
+# .section .patch_SongOfTimeLocation
+# .global SongOfTimeLocation_patch
+# SongOfTimeLocation_patch:
+    # cpy r0,r5
+    # bl Cutscene_OverrideSongOfTime
+    # b 0x3C3780
 
-.section .patch_SongOfStormsLocation
-.global SongOfStormsLocation_patch
-SongOfStormsLocation_patch:
-    bl Cutscene_OverrideSongOfStorms
-    b 0x1427F8
+# .section .patch_SongOfStormsLocation
+# .global SongOfStormsLocation_patch
+# SongOfStormsLocation_patch:
+    # bl Cutscene_OverrideSongOfStorms
+    # b 0x1427F8
 
 .section .patch_BiggoronDayCheck
 .global BiggoronDayCheck_patch
@@ -530,29 +530,29 @@ Kokiri_CheckOpenForest_patch:
 BombchuBowlingStaticReward_patch:
     b 0x20618C
 
-.section .patch_ChildBlueWarpOverride
-.global ChildBlueWarpOverride_patch
-ChildBlueWarpOverride_patch:
-    push {r0-r12, lr}
-    bl Cutscene_BlueWarpOverride
-    pop {r0-r12, lr}
-    b 0x3F58A8
+# .section .patch_ChildBlueWarpOverride
+# .global ChildBlueWarpOverride_patch
+# ChildBlueWarpOverride_patch:
+    # push {r0-r12, lr}
+    # bl Cutscene_BlueWarpOverride
+    # pop {r0-r12, lr}
+    # b 0x3F58A8
 
-.section .patch_RutoBlueWarpOverride
-.global RutoBlueWarpOverride_patch
-RutoBlueWarpOverride_patch:
-    push {r0-r12, lr}
-    bl Cutscene_BlueWarpOverride
-    pop {r0-r12, lr}
-    b 0x1A1944
+# .section .patch_RutoBlueWarpOverride
+# .global RutoBlueWarpOverride_patch
+# RutoBlueWarpOverride_patch:
+    # push {r0-r12, lr}
+    # bl Cutscene_BlueWarpOverride
+    # pop {r0-r12, lr}
+    # b 0x1A1944
 
-.section .patch_AdultBlueWarpOverride
-.global AdultBlueWarpOverride_patch
-AdultBlueWarpOverride_patch:
-    push {r0-r12, lr}
-    bl Cutscene_BlueWarpOverride
-    pop {r0-r12, lr}
-    b 0x1E4274
+# .section .patch_AdultBlueWarpOverride
+# .global AdultBlueWarpOverride_patch
+# AdultBlueWarpOverride_patch:
+    # push {r0-r12, lr}
+    # bl Cutscene_BlueWarpOverride
+    # pop {r0-r12, lr}
+    # b 0x1E4274
 
 .section .patch_EnExItemModelDraw
 .global EnExItemModelDraw_patch
@@ -639,12 +639,12 @@ BusinessScrubTable_patch:
 KakarikoGateCheck_patch:
     bl hook_KakarikoGateCheck
 
-.section .patch_FairyReward
-.global FairyReward_patch
-FairyReward_patch:
-    cpy r0,r4
-    bl Cutscene_OverrideFairyReward
-    b 0x3E75F8
+# .section .patch_FairyReward
+# .global FairyReward_patch
+# FairyReward_patch:
+    # cpy r0,r4
+    # bl Cutscene_OverrideFairyReward
+    # b 0x3E75F8
 
 .section .patch_PoeCollectorGetFirstTextbox
 .global PoeCollectorGetFirstTextbox_patch
@@ -892,20 +892,20 @@ BombchuBowlingPrizeOrder_patch:
     .word 0x0021CB0C
     .word 0x0021CAF4
 
-.section .patch_CourtyardCheckForVisitedZeldaOne
-.global CourtyardCheckForVisitedZeldaOne_patch
-CourtyardCheckForVisitedZeldaOne_patch:
-    ldreqh r0,[r0,#0xF4]
+# .section .patch_CourtyardCheckForVisitedZeldaOne
+# .global CourtyardCheckForVisitedZeldaOne_patch
+# CourtyardCheckForVisitedZeldaOne_patch:
+    # ldreqh r0,[r0,#0xF4]
 
-.section .patch_CourtyardCheckForVisitedZeldaTwo
-.global CourtyardCheckForVisitedZeldaTwo_patch
-CourtyardCheckForVisitedZeldaTwo_patch:
-    ldreqh r0,[r0,#0xF4]
+# .section .patch_CourtyardCheckForVisitedZeldaTwo
+# .global CourtyardCheckForVisitedZeldaTwo_patch
+# CourtyardCheckForVisitedZeldaTwo_patch:
+    # ldreqh r0,[r0,#0xF4]
 
-.section .patch_ImpaInCourtyardCheckForVisitedZelda
-.global ImpaInCourtyardCheckForVisitedZelda_patch
-ImpaInCourtyardCheckForVisitedZelda_patch:
-    ldrh r2,[r1,#0xF4]
+# .section .patch_ImpaInCourtyardCheckForVisitedZelda
+# .global ImpaInCourtyardCheckForVisitedZelda_patch
+# ImpaInCourtyardCheckForVisitedZelda_patch:
+    # ldrh r2,[r1,#0xF4]
 
 .section .patch_LikeLikeNeverEatTunic
 .global LikeLikeNeverEatTunic_patch
@@ -983,12 +983,12 @@ SlidingDoorDestroyCustomModels_patch:
 HandleDoorDestroyCustomModels_patch:
     bl hook_HandleDoorDestroyCustomModels
 
-.section .patch_DoorOfTimeOpenCutscene
-.global DoorOfTimeOpenCutscene_patch
-DoorOfTimeOpenCutscene_patch:
-    add r0,r6,#0x100
-    ldrh r0,[r0,#0x4]
-    cmp r0,#0x43
+# .section .patch_DoorOfTimeOpenCutscene
+# .global DoorOfTimeOpenCutscene_patch
+# DoorOfTimeOpenCutscene_patch:
+    # add r0,r6,#0x100
+    # ldrh r0,[r0,#0x4]
+    # cmp r0,#0x43
 
 .section .patch_DungeonCheckJabuMQBox
 .global DungeonCheckJabuMQBox_patch
@@ -1510,25 +1510,25 @@ GiantsKnifeWithoutKokiriSword_patch:
     cmp r3,#0x8
     blt 0x376C54
 
-.section .patch_SkipTimeTravelCutsceneOne
-.global SkipTimeTravelCutsceneOne_patch
-SkipTimeTravelCutsceneOne_patch:
-    b hook_SkipTimeTravelCutsceneOne
+# .section .patch_SkipTimeTravelCutsceneOne
+# .global SkipTimeTravelCutsceneOne_patch
+# SkipTimeTravelCutsceneOne_patch:
+    # b hook_SkipTimeTravelCutsceneOne
 
-.section .patch_SkipTimeTravelCutsceneTwo
-.global SkipTimeTravelCutsceneTwo_patch
-SkipTimeTravelCutsceneTwo_patch:
-    bl hook_SkipTimeTravelCutsceneTwo
+# .section .patch_SkipTimeTravelCutsceneTwo
+# .global SkipTimeTravelCutsceneTwo_patch
+# SkipTimeTravelCutsceneTwo_patch:
+    # bl hook_SkipTimeTravelCutsceneTwo
 
 .section .patch_SwapAgeIgnoreSceneSetup
 .global SwapAgeIgnoreSceneSetup_patch
 SwapAgeIgnoreSceneSetup_patch:
     nop
 
-.section .patch_SkipMasterSwordFanfare
-.global SkipMasterSwordFanfare_patch
-SkipMasterSwordFanfare_patch:
-    bl hook_SkipMasterSwordFanfare
+# .section .patch_SkipMasterSwordFanfare
+# .global SkipMasterSwordFanfare_patch
+# SkipMasterSwordFanfare_patch:
+    # bl hook_SkipMasterSwordFanfare
 
 .section .patch_GameOverDontSpoilTradeItems
 .global GameOverDontSpoilTradeItems_patch
@@ -1622,30 +1622,30 @@ OverrideFogDuringGameplayInit_patch:
 KotakeDontPlayBattleMusic_patch:
     nop
 
-.section .patch_SkipTwinrovaQuarrelCutsceneOne
-.global SkipTwinrovaQuarrelCutsceneOne_patch
-SkipTwinrovaQuarrelCutsceneOne_patch:
-    sub r1,r1,#0x500
+# .section .patch_SkipTwinrovaQuarrelCutsceneOne
+# .global SkipTwinrovaQuarrelCutsceneOne_patch
+# SkipTwinrovaQuarrelCutsceneOne_patch:
+    # sub r1,r1,#0x500
 
-.section .patch_SkipTwinrovaQuarrelCutsceneTwo
-.global SkipTwinrovaQuarrelCutsceneTwo_patch
-SkipTwinrovaQuarrelCutsceneTwo_patch:
-    bl hook_SkipTwinrovaQuarrelCutscene
+# .section .patch_SkipTwinrovaQuarrelCutsceneTwo
+# .global SkipTwinrovaQuarrelCutsceneTwo_patch
+# SkipTwinrovaQuarrelCutsceneTwo_patch:
+    # bl hook_SkipTwinrovaQuarrelCutscene
 
 .section .patch_FixItemsMenuSlotDuplication
 .global FixItemsMenuSlotDuplication_patch
 FixItemsMenuSlotDuplication_patch:
     b hook_FixItemsMenuSlotDuplication
 
-.section .patch_PlayEntranceCutscene
-.global PlayEntranceCutscene_patch
-PlayEntranceCutscene_patch:
-    b hook_PlayEntranceCutscene
+# .section .patch_PlayEntranceCutscene
+# .global PlayEntranceCutscene_patch
+# PlayEntranceCutscene_patch:
+    # b hook_PlayEntranceCutscene
 
-.section .patch_SkipJabuOpeningCutscene
-.global SkipJabuOpeningCutscene_patch
-SkipJabuOpeningCutscene_patch:
-    bl hook_SkipJabuOpeningCutscene
+# .section .patch_SkipJabuOpeningCutscene
+# .global SkipJabuOpeningCutscene_patch
+# SkipJabuOpeningCutscene_patch:
+    # bl hook_SkipJabuOpeningCutscene
 
 .section .patch_MultiplyPlayerSpeed
 .global MultiplyPlayerSpeed_patch
