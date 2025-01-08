@@ -120,10 +120,6 @@ SECTIONS
 		*(.patch_BeanDaddyModifyPrice)
 	}
 
-	.patch_SkipTwinrovaQuarrelCutsceneOne 0x15273C : {
-		*(.patch_SkipTwinrovaQuarrelCutsceneOne)
-	}
-
 	.patch_FairyPickupHealAmount 0x15CA4C : {
 		*(.patch_FairyPickupHealAmount)
 	}
@@ -210,18 +206,6 @@ SECTIONS
 
 	.patch_MidoForestDialog 0x173944 : {
 		*(.patch_MidoForestDialog)
-	}
-
-	.patch_SkipTimeTravelCutsceneOne 0x174DEC : {
-		*(.patch_SkipTimeTravelCutsceneOne)
-	}
-
-	.patch_SkipTwinrovaQuarrelCutsceneTwo 0x176110 : {
-		*(.patch_SkipTwinrovaQuarrelCutsceneTwo)
-	}
-
-	.patch_LostWoodsTargetCutscene 0x178058 : {
-		*(.patch_LostWoodsTargetCutscene)
 	}
 
 	.patch_CarpenterBossDontNullExchangeItem 0x178BE4 : {
@@ -374,10 +358,6 @@ SECTIONS
 
 	.patch_ReadGossipStoneHints 0x1B3A44 : {
 		*(.patch_ReadGossipStoneHints)
-	}
-
-	.patch_SkipJabuOpeningCutscene 0x1B583C : {
-		*(.patch_SkipJabuOpeningCutscene)
 	}
 
 	.patch_KingZoraSecondTunic 0x1B6A18 : {
@@ -698,10 +678,6 @@ SECTIONS
 
 	.patch_FishingIgnoreTempBOne 0x2C3A10 : {
 		*(.patch_FishingIgnoreTempBOne)
-	}
-
-	.patch_DoorOfTimeOpenCutscene 0x2C6218 : {
-		*(.patch_DoorOfTimeOpenCutscene)
 	}
 
 	.patch_NoHealFromHealthUpgrades 0x2CD07C : {
@@ -1346,10 +1322,6 @@ SECTIONS
 		*(.patch_Multiplayer_UpdatePrevActorFlags)
 	}
 
-	.patch_PlayEntranceCutscene 0x44F068 + region_offset : {
-		*(.patch_PlayEntranceCutscene)
-	}
-
 	.patch_RequiemLocation 0x44F104 + region_offset : {
 		*(.patch_RequiemLocation)
 	}
@@ -1548,10 +1520,6 @@ SECTIONS
 
 	.patch_SwapFaroresWind 0x49186C + region_offset : {
 		*(.patch_SwapFaroresWind)
-	}
-
-	.patch_SkipTimeTravelCutsceneTwo 0x4918C8 + region_offset : {
-		*(.patch_SkipTimeTravelCutsceneTwo)
 	}
 
 	.patch_SwapAgeIgnoreSceneSetup 0x4918B0 + region_offset : {
