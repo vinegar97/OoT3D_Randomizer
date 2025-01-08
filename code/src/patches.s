@@ -349,14 +349,14 @@ PoeCollectorCheckPoints_patch:
 LACSConditionOne_patch:
     nop
 
-.section .patch_LACSConditionTwo
-.global LACSConditionTwo_patch
-LACSConditionTwo_patch:
-    bl Cutscene_OverrideLACS
-    nop
-    nop
-    nop
-    nop
+# .section .patch_LACSConditionTwo
+# .global LACSConditionTwo_patch
+# LACSConditionTwo_patch:
+    # bl Cutscene_OverrideLACS
+    # nop
+    # nop
+    # nop
+    # nop
 
 # .section .patch_MinuetLocation
 # .global MinuetLocation_patch
@@ -1906,10 +1906,10 @@ TruthSpinnerSpeed_patch:
     strh r2,[r4,#0xC4]
     movgt r2,#0x20
 
-.section .patch_LostWoodsTargetCutscene
-.global LostWoodsTargetCutscene_patch
-LostWoodsTargetCutscene_patch:
-    nop
+# .section .patch_LostWoodsTargetCutscene
+# .global LostWoodsTargetCutscene_patch
+# LostWoodsTargetCutscene_patch:
+    # nop
 
 .section .patch_LostWoodsTargetTimer
 .global LostWoodsTargetTimer_patch
